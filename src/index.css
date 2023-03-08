@@ -1,0 +1,139 @@
+:root {
+  --clr-neutral-100: #e5e5e5;
+  --clr-neutral-700: #777777;
+
+  --ff-title: 'Cinzel', serif;
+  --ff-body: 'Roboto', sans-serif;
+
+  --fs-100: 0.75rem;
+  --fs-200: 1rem;
+  --fs-300: 1.25rem;
+  --fs-400: 1.5rem;
+  --fs-600: 2rem;
+
+  --fw-100: 100;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --transform: all 0.1s linear;
+}
+body {
+  background-color: var(--clr-neutral-100);
+  box-sizing: border-box;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-400);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+.loading {
+  height: calc(100vh - 72px);
+}
+.square-gif {
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 500px) {
+  .loading {
+    height: calc(100svh - 200px);
+  }
+}
+.title {
+  font-family: var(--ff-title);
+}
+.title--lg {
+  font-size: 4rem;
+}
+.capitalize-text {
+  text-transform: capitalize;
+}
+@media (max-width: 450px) {
+  .title--lg {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+}
+.search {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .search {
+    width: 768px;
+  }
+}
+/* Modified classes for Bootstrap */
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.card {
+  border: none;
+}
+.testClass {
+  text-decoration: none;
+  color: black;
+}
+.testClass:hover {
+  color: black;
+}
+.card:hover {
+  scale: 1.025;
+  border: none;
+  box-shadow: 5px 5px 20px var(--clr-neutral-700);
+  transition: var(--transform);
+}
+.cocktail__title {
+  font-size: 1.75rem;
+  font-weight: var(--fw-500);
+}
+.cocktail__type {
+  display: inline;
+  color: white;
+  font-size: 1.25rem;
+  background-color: gray;
+  border-radius: 0.25rem;
+  padding: 0 5px;
+  font-weight: var(--fw-400);
+}
+.sm-size {
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  color: gray;
+}
+.cocktail__type--cocktail {
+  background-color: #34ace0;
+}
+.cocktail__type--mixed {
+  background-color: #33d9b2;
+}
+.cocktail__type--wine {
+  background-color: #ffb142;
+}
+.cocktail__type--highball {
+  background-color: #706fd3;
+}
+.description-paragraph {
+  width: clamp(350px, 60%, 800px);
+}
+.box {
+  padding: 0.5rem;
+}
+.box--bg {
+  background-color: white;
+  border-radius: 0.5rem;
+}
+.testClass {
+  padding-inline: 0;
+}
+@media (min-width: 992px) {
+  .testClass {
+    padding-inline: 0.5rem;
+  }
+}
+.thin-font {
+  font-weight: var(--fw-400);
+}
