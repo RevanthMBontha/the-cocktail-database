@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 // import pages
 import Home from './pages/Home';
 import About from './pages/About';
@@ -24,7 +29,8 @@ function App() {
             path="cocktail/:cocktailId"
             element={<SingleCocktailDetails />}
           />
-          <Route path="*" element={<Error />} />
+          <Route path="/error" element={<Error />} />
+          <Route path="*" element={<Navigate to="/error" replace />} />
         </Routes>
       </ScrollToTop>
     </Router>
